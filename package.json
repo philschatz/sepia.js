@@ -1,0 +1,29 @@
+{
+  "name": "sepia-js",
+  "version": "0.0.0",
+  "description": "Sepia for the browser",
+  "main": "sepia.js",
+  "scripts": {
+    "prepublish": "bower install",
+    "update": "bower update"
+  },
+  "dependencies": {
+    "grunt": "~0.4.2"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.6.3",
+    "grunt-coffeelint": "~0.0.7",
+    "grunt-bump": "~0.0.10",
+    "grunt-contrib-coffee": "~0.7",
+    "grunt-contrib-clean": "~0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philschatz/sepia.js.git"
+  },
+  "keywords": [
+    "javascript",
+    "fixture"
+  ],
+  "author": "Philip Schatz"
+}
