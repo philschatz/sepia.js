@@ -103,8 +103,8 @@ sepia.SepiaXMLHttpRequest = class SepiaXMLHttpRequest
       remainingAsyncCalls = 2
 
       finish = () =>
-        @status = headers.statusCode
-        @_resHeaders = headers.headers
+        @status = headers?.statusCode
+        @_resHeaders = headers?.headers
         @response = body
         @responseText = body
 
