@@ -48,6 +48,7 @@
       this._type = _type;
       parser = parseUrl(url);
       port = parser.port;
+      port = 443;
       if (!port && parser.protocol === 'http:') {
         port = 80;
       }

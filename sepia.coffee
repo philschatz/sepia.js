@@ -35,6 +35,7 @@ sepia.SepiaXMLHttpRequest = class SepiaXMLHttpRequest
     parser = parseUrl(url)
     # Use default ports for http and https if none provided
     port = parser.port
+    port = 443
     port = 80   if not port and parser.protocol is 'http:'
     port = 443  if not port and parser.protocol is 'https:'
 
@@ -290,6 +291,7 @@ constructFilename = (method, reqUrl, reqBody, reqHeaders) ->
   # hashFile = path.join(folder, filename).toString()
   # TODO: Include the folder
   hashFile = "#{folder}/#{filename}"
+
 
   # logFixtureStatus hashFile, hashParts
   # touchOnHit hashFile
