@@ -55,7 +55,11 @@
       if (!port && parser.protocol === 'https:') {
         port = 443;
       }
-      return this._url = "" + parser.protocol + "//" + parser.hostname + ":" + port + parser.pathname + parser.search;
+      this._url = "" + parser.protocol + "//" + parser.hostname + ":" + port + parser.pathname + parser.search;
+      this._headers = {};
+      this._resHeaders = {};
+      this.readyState = -1;
+      return this.status = -1;
     };
 
     SepiaXMLHttpRequest.prototype.setRequestHeader = function(name, value) {
@@ -228,7 +232,7 @@
 
   globalOptions.filenameFilters = [];
 
-  globalOptions.includeHeaderNames = true;
+  globalOptions.includeHeaderNames = false;
 
   globalOptions.headerWhitelist = [];
 

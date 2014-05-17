@@ -40,6 +40,10 @@ sepia.SepiaXMLHttpRequest = class SepiaXMLHttpRequest
     port = 443  if not port and parser.protocol is 'https:'
 
     @_url = "#{parser.protocol}//#{parser.hostname}:#{port}#{parser.pathname}#{parser.search}"
+    @_headers = {}
+    @_resHeaders = {}
+    @readyState = -1
+    @status = -1
 
   setRequestHeader: (name, value) ->
     @_headers[name] = value
@@ -177,7 +181,7 @@ globalOptions = {}
 globalOptions.rootPrefix = '/' # Used for browser tests that run in a different dir than the project root
 globalOptions.filenamePrefix = 'fixtures/generated'
 globalOptions.filenameFilters = []
-globalOptions.includeHeaderNames = true
+globalOptions.includeHeaderNames = false
 globalOptions.headerWhitelist = []
 globalOptions.includeCookieNames = true
 globalOptions.cookieWhitelist = []
